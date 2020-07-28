@@ -1,14 +1,14 @@
-import emoji
 import random
 import sys
 
-print("H A N G M A N")
 list_words = ['honour', 'object', 'sustained', 'reasonable']
 word_choice = random.choice(list_words)
 hidden_word = list('-' * len(word_choice))
 used_letters = []
 lives = 8
 
+#menu
+print("H A N G M A N")
 authorization = ''
 while authorization != 'ok':
     menu = input('Type "play" to play the game, "exit" to quit: ')
@@ -19,6 +19,7 @@ while authorization != 'ok':
     else:
         continue
 
+ #game
 while lives > 0:
     print('\n' + ''.join(hidden_word))
     if '-' not in hidden_word:
